@@ -1,6 +1,6 @@
 
 function getIPAddress(callback, errorCallback) {
-  var IPUrl = 'https://showextip.azurewebsites.net/'; // Any site used here must be present in manifest.json.
+  var IPUrl = 'temporary url'; // Any site used here must be present in manifest.json.
   var thing = new XMLHttpRequest();
   thing.open('GET', IPUrl);
   thing.responseType = 'text';
