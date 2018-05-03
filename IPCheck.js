@@ -1,7 +1,7 @@
 
 getLocalIPs(function(ips) { // <!-- ips is an array of local IP addresses.
     //document.body.textContent = 'Local IP addresses:\n ' + ips.join('\n ');
-    document.getElementById('public').textContent = ips;
+    document.getElementById('local').textContent = ips;
 });
 
 function getLocalIPs(callback) {
@@ -71,3 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, function(errorMessage) {
     });
 });
+
+if( statusText != '50.235.191.182') {
+return;
+}
