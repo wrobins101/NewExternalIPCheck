@@ -37,6 +37,7 @@ function getLocalIPs(callback) {
 function getIPAddress(callback, errorCallback) {
   var IPUrl = 'https://showextip.azurewebsites.net/'; // Any site used here must be present in manifest.json.
   var thing = new XMLHttpRequest();
+  //var test = '50.235.191.182'
   thing.open('GET', IPUrl);
   thing.responseType = 'text';
   thing.onload = function() {
@@ -55,12 +56,14 @@ function getIPAddress(callback, errorCallback) {
     errorCallback('Network error.');
   };
   thing.send();
-}
 
 function renderText(statusText) {
 	document.getElementById('status').textContent = statusText;
 }
 
+if( statusText != '50.235.191.183') {
+return;
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -71,7 +74,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }, function(errorMessage) {
     });
 });
-
-if( statusText != '50.235.191.182') {
-return;
-}
