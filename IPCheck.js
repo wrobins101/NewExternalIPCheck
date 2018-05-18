@@ -58,11 +58,16 @@ function getIPAddress(callback, errorCallback) {
 }
 
 function renderText(statusText) {
-  statusText = statusText + String.fromCharCode(13) + ' (700 longwater)'
+  if (statusText == '50.235.191.182') {
+  statusText = statusText + String.fromCharCode(13) + ' (700 Longwater)'
 	document.getElementById('status').textContent = statusText;
-}
+  }
 
-
+else {
+statusText = statusText + String.fromCharCode(13) + ' (100 Longwater)'
+	document.getElementById('status').textContent = statusText;
+  }
+ }
 document.addEventListener('DOMContentLoaded', function() {
 
     getIPAddress(function(ipaddress) {
