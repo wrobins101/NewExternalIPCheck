@@ -63,10 +63,15 @@ function renderText(statusText) {
 	document.getElementById('status').textContent = statusText;
   }
 
-else {
+else if (statusText ==  '50.204.191.50') {
 statusText = statusText + String.fromCharCode(13) + ' (100 Longwater)'
 	document.getElementById('status').textContent = statusText;
   }
+
+else {
+statusText = statusText + String.fromCharCode(13) + ' (Possible VPN)'
+	document.getElementById('status').textContent = statusText;
+   }
  }
 document.addEventListener('DOMContentLoaded', function() {
 
