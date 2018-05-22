@@ -1,7 +1,7 @@
 
 getLocalIPs(function(ips) { // <!-- ips is an array of local IP addresses.
     //document.body.textContent = 'Local IP addresses:\n ' + ips.join('\n ');
-    document.getElementById('local').textContent = ips;
+    document.getElementById('public').textContent = ips;
 });
 
 function getLocalIPs(callback) {
